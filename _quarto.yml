@@ -1,0 +1,18 @@
+author: 
+  - name: Alexander J. Senetcky
+    orcid: 0009-0009-3730-5397
+    email: alexander.senetcky@ct.gov
+    degrees: 
+      - BS
+      - MPH
+    url: https://asenetcky.dev
+    phone: "(860) 733-3609"
+    affiliations:
+      - name: Connecticut State Department of Public Health
+        department: Data Management and Governance
+        address: 410 Capital Ave.
+        city: Hartford
+        state: CT
+        postal-code: 06134
+        url: https://portal.ct.gov/dph
+author-title: "Data Scientist"

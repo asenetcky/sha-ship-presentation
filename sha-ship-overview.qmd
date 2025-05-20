@@ -1,0 +1,52 @@
+---
+title: "State of SHA/SHIP"
+title-slide-attributes:
+  data-background-image: dph_logo_horizontal_white.png
+  data-background-size: 15%
+  data-background-position: center bottom
+  data-background-color: "#3371E7"
+  data-footer: false
+format: 
+  revealjs:
+    center-title-slide: true
+    footer: "Connecticut Public Health"
+    embed-resources: true
+editor: source
+---
+
+
+:::: {.columns}
+
+
+::: {.column width="50%"}
+
+
+
+Table of contents
+:::
+
+::: {.column width="50%"}
+- What is out there?
+- Noteworthy or Interesting
+- The Takeaway
+:::
+
+::::
+
+# What is out there? {background-color="#3371E7"}
+
+```{r}
+#| label: setup
+#| code-fold: true
+
+library(dplyr)
+library(nanoparquet)
+
+data <- nanoparquet::read_parquet("state-sha-ship.parquet")
+
+dplyr::glimpse(data)
+```
+
+## normie slide
+
+{{< lipsum 1 >}}
