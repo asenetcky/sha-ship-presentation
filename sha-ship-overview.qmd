@@ -68,6 +68,7 @@ Table of contents
 
 library(dplyr)
 library(nanoparquet)
+library(ggplot2)
 
 data <-
   nanoparquet::read_parquet("state-sha-ship.parquet") |>
@@ -75,16 +76,86 @@ data <-
     !state_territory %in% c("astho", "healthy people in state and territories")
   )
 
-data |>
-  filter(content_type == "sha") |>
-  count(content_platform)
-```
+yikes <-
+  data |>
+  filter(yikes == 1)
 
-## normie slide
+star <-
+  data |>
+  filter(star == 1)
+
+interesting <-
+  data |>
+  filter(interesting == 1)
+```
 
 # Noteworthy or Interesting {background-color="#3371E7"}
 
-## Novel
+# The Good
+
+## Louisiana
+![Louisiana Landing Page](louisiana.png)
+
+## Louisiana
+[https://ldh.la.gov/bureau-of-planning-performance/shaship](Louisiana)
+
+- Louisiana I think did a really nice job.
+- They did use a paid platform: [`mySidewalk`](https://www.mysidewalk.com/)
+- However, I think regardless of the platform - it was organized well.
+
+## Louisiana
+[https://ldh.la.gov/bureau-of-planning-performance/shaship](Louisiana)
+
+  - SHA & SHIP together on a landing page
+    - Searchable from Google - *it is however* buried and somewhat difficult
+    to find navigating through the site naturally
+    - The Site in general looks great and you *can* technically navigate to
+    it from within the site 
+
+## Louisiana
+[https://ldh.la.gov/bureau-of-planning-performance/shaship](Louisiana)
+
+  - Mixed media
+    - Snippets on webpage
+    - Downloadable in-depth reports and small one-two pagers
+    - "Website Dashboard" - if you want to use it - feels natural to use
+
+## The Majority
+
+```{r}
+#| label: content-count
+#| echo: false
+
+data |>
+  mutate(
+    content_platform = if_else(
+      content_platform == "wesbite",
+      "website",
+      content_platform
+    )
+  ) |>
+  count(content_platform) |>
+  mutate(
+    perc = round(n / sum(n), 2) * 100,
+    perc = paste0(perc, "%"),
+    content_platform = stringr::str_to_title(content_platform),
+    content_platform = forcats::fct_reorder(content_platform, n)
+  ) |>
+  ggplot() +
+  geom_col(aes(content_platform, n), col = "black", fill = "#3371E7") +
+  geom_text(aes(content_platform, n, label = perc), hjust = -0.25) +
+  theme_classic() +
+  labs(
+    title = "SHA/SHIP Content Types",
+    y = "Count",
+    x = ""
+  ) +
+  coord_flip() +
+  theme(
+    axis.text.y = element_text(size = 10)
+  )
+
+```
 
 ## The Overwhelming
 - Massachusetts - slick visuals and endless combos of reports
