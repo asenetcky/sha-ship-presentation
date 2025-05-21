@@ -60,8 +60,6 @@ Table of contents
   - Websites **difficult to navigate** - not always a common landing page for SHA/SHIP
   - Tried used an AI agent - it struggled and ultimately **wasn't useful**
 
-## Mostly Monolithic PDFs
-
 ```{r}
 #| label: setup
 #| echo: false
@@ -157,27 +155,52 @@ data |>
 
 ```
 
+## The Majority
+
+- They almost all look the same. 
+- When it is one enormous document - without any kind of summary:
+  - I always ask myself who is the intended audience?
+  - Does the content match up with that audience?
+  - Could all the audiences be better served by smaller, more diverse content?
+
 ## The Overwhelming
+[Massachusetts](https://www.mass.gov/info-details/state-health-assessment-sha)
+
 - Massachusetts - slick visuals and endless combos of reports
-  - but the complexity
-  - where is the narrative - no really I couldnt find it.
+  - The complexity!
+  - Where is the narrative - no really I couldnt find it
+  - Looks like a nightmare to maintain
+  - Only self-service
 
 
-## The Box Tickers
-- KPI lists with no context
-- Scorecards
+## Box Ticking
+- Painful to use: New York, Kansas, Maine, South Carolina
+- KPI lists or Scorecards with little or no context (that was easily found): 
+  - Hawaii, DC
 
 ## The Broken
-TODO
-- Broken links: DOUBLECHECK - Florida (TODO)
-- Literally nothing since 2012: DOUBLECHECK - Tennesee? (TODO)
-- Ohio dashboard - comes from a good place - but so crammed full can't make heads or tails
-  - just look at that leading deaths dashboard page. 
+- Broken links: Florida, Utah, Virginia
+- Nothing!?: Michigan, West Virginina(since 2000, whispers in 2017...)
+- Ohio dashboard 
+  - Comes from a good place; but is a dashbaord leasing to 50 other dashboards
+  - The dashboards are 
+  [so crammed full of content](https://analytics.das.ohio.gov/t/ODHDPPUB/views/SHA_FINAL_Domain_LeadingCausesDeath/02_COD?%3Aembed=y&%3AisGuestRedirectFromVizportal=y&%3Alinktarget=_self) - you can't make sense of it
 
 # The Takeaway {background-color="#3371E7"}
 
 ## Where do we stack up?
 
-- We are in "good" company - we have an enormous, expensive looking pdf - like almost everyone else.
-- There are opportunities here for innovation and cost-savings that could make us leaders 
-in this space.
+- We are in "good" company
+  - We have an enormous, expensive looking pdf - like almost everyone else.
+- There are opportunities here for innovation and cost-savings that could
+make us leaders in this space
+
+## Where do we stack up?
+
+- The [SHIP page](https://portal.ct.gov/dph/state-health-planning/healthy-connecticut/healthy-connecticut-2025)
+looks pretty decent - but if I navigate to say the SHA. I can't find that page
+again without using "back" in my browser or googling. Only the SHIP Policy Agenda
+is on the sidebar
+- The [SHA page](https://portal.ct.gov/dph/state-health-planning/healthy-connecticut/healthy-ct-2025-state-health-assessment) is leaving website real estate
+on the table by not telling some kind of narrative up front. It's *only* links
+to pdfs bits and pieces
