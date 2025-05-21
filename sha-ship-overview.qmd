@@ -8,7 +8,7 @@ title-slide-attributes:
 format: 
   revealjs:
     center-title-slide: true
-    footer: "Connecticut Public Health"
+    footer: "Connecticut Public Health - Data Management and Governance"
     embed-resources: true
 editor: source
 ---
