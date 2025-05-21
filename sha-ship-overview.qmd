@@ -1,7 +1,6 @@
 ---
 title: "State of SHA/SHIP"
 title-slide-attributes:
-  data-background-image: dph_logo_horizontal_white.png
   data-background-size: 15%
   data-background-position: center bottom
   data-background-color: "#3371E7"
@@ -35,18 +34,79 @@ Table of contents
 
 # What is out there? {background-color="#3371E7"}
 
+
+## The Methodology
+- I searched the web using combintations of:
+  - "STATE_NAME state health assessment"
+  - "STATE_NAME state health improvement plan"
+  - My classifications are *not* perfect
+  - How I categorized thing changed over time
+    - but the highlights remained the same
+
+## The Methodology
+- ASTHO has a list of documents from states
+  - Not every state was represented and many links were broken
+
+## The Methodology
+- Healthy People 2030 had a list of SHIPs
+  - Decent for SHIPS - which often lead to finding SHAs - but not always
+  - Not every state and not every link was live
+  - Not always the latest
+
+## The Methodology
+- It wasn't easy  to find everything
+  - Some states used their **own jargon**
+  - Some documents ***only accessible through search engines***
+  - Websites **difficult to navigate** - not always a common landing page for SHA/SHIP
+  - Tried used an AI agent - it struggled and ultimately **wasn't useful**
+
+## Mostly Monolithic PDFs
+
 ```{r}
 #| label: setup
-#| code-fold: true
+#| echo: false
 
 library(dplyr)
 library(nanoparquet)
 
-data <- nanoparquet::read_parquet("state-sha-ship.parquet")
+data <-
+  nanoparquet::read_parquet("state-sha-ship.parquet") |>
+  filter(
+    !state_territory %in% c("astho", "healthy people in state and territories")
+  )
 
-dplyr::glimpse(data)
+data |>
+  filter(content_type == "sha") |>
+  count(content_platform)
 ```
 
 ## normie slide
 
-{{< lipsum 1 >}}
+# Noteworthy or Interesting {background-color="#3371E7"}
+
+## Novel
+
+## The Overwhelming
+- Massachusetts - slick visuals and endless combos of reports
+  - but the complexity
+  - where is the narrative - no really I couldnt find it.
+
+
+## The Box Tickers
+- KPI lists with no context
+- Scorecards
+
+## The Broken
+TODO
+- Broken links: DOUBLECHECK - Florida (TODO)
+- Literally nothing since 2012: DOUBLECHECK - Tennesee? (TODO)
+- Ohio dashboard - comes from a good place - but so crammed full can't make heads or tails
+  - just look at that leading deaths dashboard page. 
+
+# The Takeaway {background-color="#3371E7"}
+
+## Where do we stack up?
+
+- We are in "good" company - we have an enormous, expensive looking pdf - like almost everyone else.
+- There are opportunities here for innovation and cost-savings that could make us leaders 
+in this space.
